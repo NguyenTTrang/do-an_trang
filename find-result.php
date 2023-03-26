@@ -79,7 +79,7 @@ include 'includes/config.php';?>
                     </div>
                     <!-- /.panel -->
                     <p class="text-muted text-center"><small>Copyright © <a
-                                href="">SRMS</a> 2019</small></p>
+                                href="">Nguyễn Thị Trang</a> 2023</small></p>
                 </div>
                 <!-- /.col-md-6 col-md-offset-3 -->
             </div>
