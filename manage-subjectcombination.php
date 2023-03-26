@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->bindParam(':acid', $acid, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Subject Activate successfully";
+        $msg = "Môn học được Kích hoạt thành công";
     }
 
     // for Deactivate Subject
@@ -26,7 +26,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->bindParam(':did', $did, PDO::PARAM_STR);
         $query->bindParam(':status', $status, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Subject Deactivate successfully";
+        $msg = "Môn học được Hủy kích hoạt thành công";
     }
     ?>
 <!DOCTYPE html>

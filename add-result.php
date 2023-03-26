@@ -32,9 +32,9 @@ if (strlen($_SESSION['alogin']) == "") {
             $query->execute();
             $lastInsertId = $dbh->lastInsertId();
             if ($lastInsertId) {
-                $msg = "Result info added successfully";
+                $msg = "Thông tin điểm được thêm thành công";
             } else {
-                $error = "Something went wrong. Please try again";
+                $error = "Đã xảy ra sự cố. Vui lòng thử lại";
             }
         }
     }

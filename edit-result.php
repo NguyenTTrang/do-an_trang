@@ -23,7 +23,8 @@ if (strlen($_SESSION['alogin']) == "") {
                 $query->bindParam(':iid', $iid, PDO::PARAM_STR);
                 $query->execute();
 
-                $msg = "Result info updated successfully";
+                $msg = "
+                Thông tin điểm được cập nhật thành công";
             }
         }
     }

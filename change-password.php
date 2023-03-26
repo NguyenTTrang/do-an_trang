@@ -21,9 +21,9 @@ if (strlen($_SESSION['alogin']) == "") {
             $chngpwd1->bindParam(':username', $username, PDO::PARAM_STR);
             $chngpwd1->bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
             $chngpwd1->execute();
-            $msg = "Your Password succesfully changed";
+            $msg = "Mật khẩu của bạn đã thay đổi thành công";
         } else {
-            $error = "Your current password is wrong";
+            $error = "Mật khẩu hiện tại của bạn là sai";
         }
     }
     ?>

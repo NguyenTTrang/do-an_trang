@@ -17,7 +17,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Combination added successfully";
+            $msg = "Môn học được thêm vào lớp thành công";
         } else {
             $error = "Something went wrong. Please try again";
         }

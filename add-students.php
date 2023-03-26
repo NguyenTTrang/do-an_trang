@@ -25,9 +25,9 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Student info added successfully";
+            $msg = "Đã thêm thông tin sinh viên thành công";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Đã xảy ra sự cố. Vui lòng thử lại";
         }
     }
     ?>

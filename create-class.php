@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+
 include 'includes/config.php';
 if (strlen($_SESSION['alogin']) == "") {
     header("Location: index.php");
@@ -17,9 +18,9 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->execute();
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
-            $msg = "Class Created successfully";
+            $msg = "Lớp được tạo thành công";
         } else {
-            $error = "Something went wrong. Please try again";
+            $error = "Đã xảy ra sự cố. Vui lòng thử lại";
         }
     }
     ?>
@@ -31,7 +32,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SMS Admin Create Class</title>
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
     <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
@@ -77,7 +78,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Create Student Class</h2>
+                                <h2 class="title">Tạo lớp học</h2>
                             </div>
 
                         </div>
@@ -85,9 +86,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                                    <li><a href="#">Classes</a></li>
-                                    <li class="active">Create Class</li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+                                    <li><a href="#">Lớp học</a></li>
+                                    <li class="active">Thêm lớp học</li>
                                 </ul>
                             </div>
 
@@ -108,16 +109,16 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h5>Create Student Class</h5>
+                                                <h5>Tạo lớp học</h5>
                                             </div>
                                         </div>
                                         <?php if ($msg) { ?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Tạo thành công!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php 
                                             } else if ($error) { ?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Tạo thất bại!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php 
                                     } ?>
@@ -126,30 +127,30 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                             <form method="post">
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="control-label">Class Name</label>
+                                                    <label for="success" class="control-label">Tên lớp học</label>
                                                     <div class="">
                                                         <input type="text" name="classname" class="form-control" required="required" id="success">
-                                                        <span class="help-block">Eg- Third, Fouth,Sixth etc</span>
+                                                        <span class="help-block">Ví dụ Mạng máy tính</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="control-label">Class Name in Numeric</label>
+                                                    <label for="success" class="control-label">Số lượng sinh viên của lớp</label>
                                                     <div class="">
                                                         <input type="number" name="classnamenumeric" required="required" class="form-control" id="success">
-                                                        <span class="help-block">Eg- 1,2,4,5 etc</span>
+                                                        <span class="help-block">Ví dụ 30, 40</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="control-label">Section</label>
+                                                    <label for="success" class="control-label">Khóa</label>
                                                     <div class="">
                                                         <input type="text" name="section" class="form-control" required="required" id="success">
-                                                        <span class="help-block">Eg- A,B,C etc</span>
+                                                        <span class="help-block">Ví dụ 64A, 64B</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group has-success">
 
                                                     <div class="">
-                                                        <button type="submit" name="submit" class="btn btn-success btn-labeled">Submit<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
+                                                        <button type="submit" name="submit" class="btn btn-success btn-labeled">Tạo<span class="btn-label btn-label-right"><i class="fa fa-check"></i></span></button>
                                                     </div>
 
 

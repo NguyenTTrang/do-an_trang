@@ -57,7 +57,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Manage Classes</h2>
+                                <h2 class="title">Quản lý lớp học</h2>
 
                             </div>
 
@@ -67,9 +67,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                                    <li> Classes</li>
-                                    <li class="active">Manage Classes</li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i>Trang chủ</a></li>
+                                    <li> Lớp học</li>
+                                    <li class="active">Quản lý lớp học</li>
                                 </ul>
                             </div>
 
@@ -89,15 +89,15 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h5>View Classes Info</h5>
+                                                <h5>Xem thông tin lớp học</h5>
                                             </div>
                                         </div>
                                         <?php if ($msg) {?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Tạo thành công!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php } else if ($error) {?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Tạo thất bại!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php }?>
                                         <div class="panel-body p-20">
@@ -107,21 +107,21 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Class Name</th>
-                                                        <th>Class Name Numeric</th>
-                                                        <th>Section</th>
-                                                        <th>Creation Date</th>
-                                                        <th>Action</th>
+                                                        <th>Tên lớp học</th>
+                                                        <th>Số sinh viên trong lớp</th>
+                                                        <th>Khóa</th>
+                                                        <th>Thời gian tạo lớp</th>
+                                                        <th>Trạng thái</th>
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Class Name</th>
-                                                        <th>Class Name Numeric</th>
-                                                        <th>Section</th>
-                                                        <th>Creation Date</th>
-                                                        <th>Action</th>
+                                                        <th>Tên lớp học</th>
+                                                        <th>Số sinh viên trong lớp</th>
+                                                        <th>Khóa</th>
+                                                        <th>Thời gian tạo lớp</th>
+                                                        <th>Trạng thái</th>
                                                     </tr>
                                                 </tfoot>
                                                 <tbody>

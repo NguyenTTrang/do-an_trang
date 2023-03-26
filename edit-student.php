@@ -27,7 +27,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->bindParam(':stid', $stid, PDO::PARAM_STR);
         $query->execute();
 
-        $msg = "Student info updated successfully";
+        $msg = "Thông tin sinh viên được cập nhật thành công";
     }
 
     ?>

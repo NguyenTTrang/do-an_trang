@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
         echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
     } else {
 
-        echo "<script>alert('Invalid Details');</script>";
+        echo "<script>alert('Thông tin chưa hợp lệ');</script>";
 
     }
 

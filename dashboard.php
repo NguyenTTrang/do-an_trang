@@ -37,7 +37,7 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="container-fluid">
                             <div class="row page-title-div">
                                 <div class="col-sm-6">
-                                    <h2 class="title">Dashboard</h2>
+                                    <h2 class="title">Bảng quản trị</h2>
 
                                 </div>
                                 <!-- /.col-sm-6 -->
@@ -61,7 +61,7 @@ $sql1 = "SELECT StudentId from tblstudents ";
     ?>
 
                                             <span class="number counter"><?php echo htmlentities($totalstudents); ?></span>
-                                            <span class="name">Regd Users</span>
+                                            <span class="name">Sinh viên</span>
                                             <span class="bg-icon"><i class="fa fa-users"></i></span>
                                         </a>
                                         <!-- /.dashboard-stat -->
@@ -78,7 +78,7 @@ $sql = "SELECT id from  tblsubjects ";
     $totalsubjects = $query->rowCount();
     ?>
                                             <span class="number counter"><?php echo htmlentities($totalsubjects); ?></span>
-                                            <span class="name">Subjects Listed</span>
+                                            <span class="name">Môn học</span>
                                             <span class="bg-icon"><i class="fa fa-ticket"></i></span>
                                         </a>
                                         <!-- /.dashboard-stat -->
@@ -95,7 +95,7 @@ $sql2 = "SELECT id from  tblclasses ";
     $totalclasses = $query2->rowCount();
     ?>
                                             <span class="number counter"><?php echo htmlentities($totalclasses); ?></span>
-                                            <span class="name">Total classes listed</span>
+                                            <span class="name">Lớp học</span>
                                             <span class="bg-icon"><i class="fa fa-bank"></i></span>
                                         </a>
                                         <!-- /.dashboard-stat -->
@@ -113,7 +113,7 @@ $sql3 = "SELECT  distinct StudentId from  tblresult ";
     ?>
 
                                             <span class="number counter"><?php echo htmlentities($totalresults); ?></span>
-                                            <span class="name">Results Declared</span>
+                                            <span class="name">Điểm</span>
                                             <span class="bg-icon"><i class="fa fa-file-text"></i></span>
                                         </a>
                                         <!-- /.dashboard-stat -->

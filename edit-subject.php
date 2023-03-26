@@ -15,7 +15,7 @@ if (strlen($_SESSION['alogin']) == "") {
         $query->bindParam(':subjectcode', $subjectcode, PDO::PARAM_STR);
         $query->bindParam(':sid', $sid, PDO::PARAM_STR);
         $query->execute();
-        $msg = "Subject Info updated successfully";
+        $msg = "Thông tin điểm được sửa thành công";
     }
     ?>
 <!DOCTYPE html>

@@ -21,38 +21,38 @@
                                         <span class="">Quản lý</span>
                                     </li>
                                     <li class="has-children">
-                                        <a href="#"><i class="fa fa-file-text"></i> <span>Student Classes</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-file-text"></i> <span>Lớp sinh viên</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="create-class.php"><i class="fa fa-bars"></i> <span>Create Class</span></a></li>
-                                            <li><a href="manage-classes.php"><i class="fa fa fa-server"></i> <span>Manage Classes</span></a></li>
+                                            <li><a href="create-class.php"><i class="fa fa-bars"></i> <span>Tạo lớp học</span></a></li>
+                                            <li><a href="manage-classes.php"><i class="fa fa fa-server"></i> <span>Quản lý lớp học</span></a></li>
                                            
                                         </ul>
                                     </li>
   <li class="has-children">
-                                        <a href="#"><i class="fa fa-file-text"></i> <span>Subjects</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-file-text"></i> <span>Môn học</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="create-subject.php"><i class="fa fa-bars"></i> <span>Create Subject</span></a></li>
-                                            <li><a href="manage-subjects.php"><i class="fa fa fa-server"></i> <span>Manage Subjects</span></a></li>
-                                           <li><a href="add-subjectcombination.php"><i class="fa fa-newspaper-o"></i> <span>Add Subject Combination </span></a></li>
-                                           <a href="manage-subjectcombination.php"><i class="fa fa-newspaper-o"></i> <span>Manage Subject Combination </span></a></li>
+                                            <li><a href="create-subject.php"><i class="fa fa-bars"></i> <span>Tạo môn học</span></a></li>
+                                            <li><a href="manage-subjects.php"><i class="fa fa fa-server"></i> <span>Quản lý môn học</span></a></li>
+                                           <li><a href="add-subjectcombination.php"><i class="fa fa-newspaper-o"></i> <span>Thêm môn vào lớp </span></a></li>
+                                           <a href="manage-subjectcombination.php"><i class="fa fa-newspaper-o"></i> <span>Quản lý môn học của lớp </span></a></li>
                                         </ul>
                                     </li>
    <li class="has-children">
-                                        <a href="#"><i class="fa fa-users"></i> <span>Students</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-users"></i> <span>Sinh viên</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="add-students.php"><i class="fa fa-bars"></i> <span>Add Students</span></a></li>
-                                            <li><a href="manage-students.php"><i class="fa fa fa-server"></i> <span>Manage Students</span></a></li>
+                                            <li><a href="add-students.php"><i class="fa fa-bars"></i> <span>Thêm sinh viên</span></a></li>
+                                            <li><a href="manage-students.php"><i class="fa fa fa-server"></i> <span>Quản lý sinh viên</span></a></li>
                                            
                                         </ul>
                                     </li>
 <li class="has-children">
-                                        <a href="#"><i class="fa fa-info-circle"></i> <span>Result</span> <i class="fa fa-angle-right arrow"></i></a>
+                                        <a href="#"><i class="fa fa-info-circle"></i> <span>Điểm</span> <i class="fa fa-angle-right arrow"></i></a>
                                         <ul class="child-nav">
-                                            <li><a href="add-result.php"><i class="fa fa-bars"></i> <span>Add Result</span></a></li>
-                                            <li><a href="manage-results.php"><i class="fa fa fa-server"></i> <span>Manage Result</span></a></li>
+                                            <li><a href="add-result.php"><i class="fa fa-bars"></i> <span>Thêm điểm</span></a></li>
+                                            <li><a href="manage-results.php"><i class="fa fa fa-server"></i> <span>Bảng điểm</span></a></li>
                                            
                                         </ul>
-                                        <li><a href="change-password.php"><i class="fa fa fa-server"></i> <span> Admin Change Password</span></a></li>
+                                        <li><a href="change-password.php"><i class="fa fa fa-server"></i> <span>Thay đổi mật khẩu</span></a></li>
                                            
                                     </li>
                             </div>
