@@ -94,10 +94,10 @@ if (strlen($_SESSION['alogin']) == "") {
                                         </div>
                                         <?php if ($msg) {?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Tạo thành công!</strong><?php echo htmlentities($msg); ?>
+                                        <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php } else if ($error) {?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Tạo thất bại!</strong> <?php echo htmlentities($error); ?>
+                                        <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php }?>
                                         <div class="panel-body p-20">
@@ -111,19 +111,9 @@ if (strlen($_SESSION['alogin']) == "") {
                                                         <th>Số sinh viên trong lớp</th>
                                                         <th>Khóa</th>
                                                         <th>Thời gian tạo lớp</th>
-                                                        <th>Trạng thái</th>
+                                                        <th>Hoạt động</th>
                                                     </tr>
                                                 </thead>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Tên lớp học</th>
-                                                        <th>Số sinh viên trong lớp</th>
-                                                        <th>Khóa</th>
-                                                        <th>Thời gian tạo lớp</th>
-                                                        <th>Trạng thái</th>
-                                                    </tr>
-                                                </tfoot>
                                                 <tbody>
                                                     <?php $sql = "SELECT * from tblclasses";
     $query = $dbh->prepare($sql);
@@ -141,7 +131,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                                         <td>
                                                             <a
                                                                 href="edit-class.php?classid=<?php echo htmlentities($result->id); ?>"><i
-                                                                    class="fa fa-edit" title="Edit Record"></i> </a>
+                                                                    class="fa fa-edit" title="Chỉnh sửa"></i> </a>
 
                                                         </td>
                                                     </tr>

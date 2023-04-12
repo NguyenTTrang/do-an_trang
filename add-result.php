@@ -46,7 +46,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SMS Admin| Add Result </title>
+    <title>Thêm điểm sinh viên</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
@@ -117,7 +117,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Declare Result</h2>
+                                <h2 class="title">Khai báo điểm</h2>
 
                             </div>
 
@@ -127,9 +127,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
 
-                                    <li class="active">Student Result</li>
+                                    <li class="active">Điểm sinh viên</li>
                                 </ul>
                             </div>
 
@@ -145,28 +145,28 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel-body">
                                         <?php if ($msg) { ?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php 
                                             } else if ($error) { ?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php 
                                     } ?>
                                         <form class="form-horizontal" method="post">
 
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Class</label>
+                                                <label for="default" class="col-sm-2 control-label">Lớp học</label>
                                                 <div class="col-sm-10">
                                                     <select name="class" class="form-control clid" id="classid" onChange="getStudent(this.value);" required="required">
-                                                        <option value="">Select Class</option>
+                                                        <option value="">Chọn lớp</option>
                                                         <?php $sql = "SELECT * from tblclasses";
                                                         $query = $dbh->prepare($sql);
                                                         $query->execute();
                                                         $results = $query->fetchAll(PDO::FETCH_OBJ);
                                                         if ($query->rowCount() > 0) {
                                                             foreach ($results as $result) { ?>
-                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->ClassName); ?>&nbsp; Section-<?php echo htmlentities($result->Section); ?></option>
+                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->ClassName); ?>&nbsp; Chọn-<?php echo htmlentities($result->Section); ?></option>
                                                         <?php 
                                                     }
                                                 } ?>
@@ -174,7 +174,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="date" class="col-sm-2 control-label ">Student Name</label>
+                                                <label for="date" class="col-sm-2 control-label ">Tên sinh viên</label>
                                                 <div class="col-sm-10">
                                                     <select name="studentid" class="form-control stid" id="studentid" required="required" onChange="getresult(this.value);">
                                                     </select>
@@ -190,7 +190,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="date" class="col-sm-2 control-label">Subjects</label>
+                                                <label for="date" class="col-sm-2 control-label">Môn học</label>
                                                 <div class="col-sm-10">
                                                     <div id="subject">
                                                     </div>
@@ -201,7 +201,7 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
-                                                    <button type="submit" name="submit" id="submit" class="btn btn-primary">Declare Result</button>
+                                                    <button type="submit" name="submit" id="submit" class="btn btn-primary">Khai báo điểm</button>
                                                 </div>
                                             </div>
                                         </form>

@@ -31,7 +31,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SMS Admin Create Class</title>
+    <title>Thêm lớp sinh viên</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
@@ -114,11 +114,11 @@ if (strlen($_SESSION['alogin']) == "") {
                                         </div>
                                         <?php if ($msg) { ?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Tạo thành công!</strong><?php echo htmlentities($msg); ?>
+                                        <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php 
                                             } else if ($error) { ?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Tạo thất bại!</strong> <?php echo htmlentities($error); ?>
+                                        <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php 
                                     } ?>

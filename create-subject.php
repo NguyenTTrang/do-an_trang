@@ -31,7 +31,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SMS Admin Subject Creation </title>
+    <title>Quản lý môn học </title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
@@ -60,7 +60,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Subject Creation</h2>
+                                <h2 class="title">Quản lý môn học</h2>
 
                             </div>
 
@@ -70,9 +70,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                                    <li> Subjects</li>
-                                    <li class="active">Create Subject</li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+                                    <li> Môn học</li>
+                                    <li class="active">Tạo môn học</li>
                                 </ul>
                             </div>
 
@@ -86,31 +86,31 @@ if (strlen($_SESSION['alogin']) == "") {
                                 <div class="panel">
                                     <div class="panel-heading">
                                         <div class="panel-title">
-                                            <h5>Create Subject</h5>
+                                            <h5>Tạo môn học</h5>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <?php if ($msg) {?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php } else if ($error) {?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php }?>
                                         <form class="form-horizontal" method="post">
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Subject Name</label>
+                                                <label for="default" class="col-sm-2 control-label">Tên môn học</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="subjectname" class="form-control"
-                                                        id="default" placeholder="Subject Name" required="required">
+                                                        id="default" placeholder="Tên môn học" required="required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Subject Code</label>
+                                                <label for="default" class="col-sm-2 control-label">Mã môn học</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="subjectcode" class="form-control"
-                                                        id="default" placeholder="Subject Code" required="required">
+                                                        id="default" placeholder="Mã môn học" required="required">
                                                 </div>
                                             </div>
 
@@ -119,7 +119,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                             <div class="form-group">
                                                 <div class="col-sm-offset-2 col-sm-10">
                                                     <button type="submit" name="submit"
-                                                        class="btn btn-primary">Submit</button>
+                                                        class="btn btn-primary">Tạo</button>
                                                 </div>
                                             </div>
                                         </form>

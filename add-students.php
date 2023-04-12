@@ -38,7 +38,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SMS Admin| Student Admission< </title> <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <title>Quản trị sinh viên| Số lượng sinh viên< </title> <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
             <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
             <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
             <link rel="stylesheet" href="css/lobipanel/lobipanel.min.css" media="screen">
@@ -66,7 +66,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Student Admission</h2>
+                                <h2 class="title">Số lượng sinh viên</h2>
 
                             </div>
 
@@ -76,9 +76,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i>Trang chủ</a></li>
 
-                                    <li class="active">Student Admission</li>
+                                    <li class="active">Số lượng sinh viên</li>
                                 </ul>
                             </div>
 
@@ -92,38 +92,38 @@ if (strlen($_SESSION['alogin']) == "") {
                                 <div class="panel">
                                     <div class="panel-heading">
                                         <div class="panel-title">
-                                            <h5>Fill the Student info</h5>
+                                            <h5>Điền thông tin sinh viên</h5>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <?php if ($msg) { ?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php 
                                             } else if ($error) { ?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php 
                                     } ?>
                                         <form class="form-horizontal" method="post">
 
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Full Name</label>
+                                                <label for="default" class="col-sm-2 control-label">Họ và tên</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="fullanme" class="form-control" id="fullanme" required="required" autocomplete="off">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Rool Id</label>
+                                                <label for="default" class="col-sm-2 control-label">Mã sinh viên</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" name="rollid" class="form-control" id="rollid" maxlength="5" required="required" autocomplete="off">
+                                                    <input type="text" name="rollid" class="form-control" id="rollid" maxlength="11" required="required" autocomplete="off">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Email id)</label>
+                                                <label for="default" class="col-sm-2 control-label">Email</label>
                                                 <div class="col-sm-10">
                                                     <input type="email" name="emailid" class="form-control" id="email" required="required" autocomplete="off">
                                                 </div>
@@ -132,23 +132,25 @@ if (strlen($_SESSION['alogin']) == "") {
 
 
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Gender</label>
+                                                <label for="default" class="col-sm-2 control-label">Giới tính</label>
                                                 <div class="col-sm-10">
-                                                    <input type="radio" name="gender" value="Male" required="required" checked="">Male <input type="radio" name="gender" value="Female" required="required">Female <input type="radio" name="gender" value="Other" required="required">Other
+                                                    <input type="radio" name="gender" value="Male" required="required" checked="">Nam 
+                                                    <input type="radio" name="gender" value="Female" required="required"> Nữ
+                                                    <input type="radio" name="gender" value="Other" required="required"> Khác
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="default" class="col-sm-2 control-label">Class</label>
+                                                <label for="default" class="col-sm-2 control-label">Lớp</label>
                                                 <div class="col-sm-10">
                                                     <select name="class" class="form-control" id="default" required="required">
-                                                        <option value="">Select Class</option>
+                                                        <option value="">Chọn lớp</option>
                                                         <?php $sql = "SELECT * from tblclasses";
                                                         $query = $dbh->prepare($sql);
                                                         $query->execute();
                                                         $results = $query->fetchAll(PDO::FETCH_OBJ);
                                                         if ($query->rowCount() > 0) {
                                                             foreach ($results as $result) { ?>
-                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->ClassName); ?>&nbsp; Section-<?php echo htmlentities($result->Section); ?></option>
+                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->ClassName); ?>&nbsp; Khóa-<?php echo htmlentities($result->Section); ?></option>
                                                         <?php 
                                                     }
                                                 } ?>
@@ -156,7 +158,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="date" class="col-sm-2 control-label">DOB</label>
+                                                <label for="date" class="col-sm-2 control-label">Ngày sinh</label>
                                                 <div class="col-sm-10">
                                                     <input type="date" name="dob" class="form-control" id="date">
                                                 </div>

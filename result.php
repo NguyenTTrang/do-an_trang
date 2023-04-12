@@ -142,7 +142,7 @@ include 'includes/config.php';
                         } else {?>
 
                         <div class="alert alert-danger left-icon-alert" role="alert">
-                            strong>Oh snap!</strong>
+                            strong>Sai rồi!</strong>
                             <?php
                                     echo htmlentities("Invalid Roll Id");
                                     }

@@ -43,7 +43,7 @@ include 'includes/config.php';?>
                                 <div class="form-group">
                                     <label for="default" class="col-sm-2 control-label">Class</label>
                                     <select name="class" class="form-control" id="default" required="required">
-                                        <option value="">Select Class</option>
+                                        <option value="">Chọn lớp</option>
                                         <?php $sql = "SELECT * from tblclasses";
                                             $query = $dbh->prepare($sql);
                                             $query->execute();

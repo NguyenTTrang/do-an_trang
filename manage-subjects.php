@@ -58,7 +58,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Manage Subjects</h2>
+                                <h2 class="title">Quản lý môn học</h2>
 
                             </div>
 
@@ -68,9 +68,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                                    <li> Subjects</li>
-                                    <li class="active">Manage Subjects</li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+                                    <li> Môn học</li>
+                                    <li class="active">Quản lý môn học</li>
                                 </ul>
                             </div>
 
@@ -90,15 +90,15 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h5>View Subjects Info</h5>
+                                                <h5>Xem tên môn học</h5>
                                             </div>
                                         </div>
                                         <?php if ($msg) {?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php } else if ($error) {?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php }?>
                                         <div class="panel-body p-20">
@@ -108,23 +108,13 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Subject Name</th>
-                                                        <th>Subject Code</th>
-                                                        <th>Creation Date</th>
-                                                        <th>Updation Date</th>
-                                                        <th>Action</th>
+                                                        <th>Tên môn học</th>
+                                                        <th>Mã môn học</th>
+                                                        <th>Ngày tạo</th>
+                                                        <th>Ngày sửa</th>
+                                                        <th>Hoạt động</th>
                                                     </tr>
                                                 </thead>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Subject Name</th>
-                                                        <th>Subject Code</th>
-                                                        <th>Creation Date</th>
-                                                        <th>Updation Date</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </tfoot>
                                                 <tbody>
                                                     <?php $sql = "SELECT * from tblsubjects";
     $query = $dbh->prepare($sql);
@@ -142,7 +132,7 @@ if (strlen($_SESSION['alogin']) == "") {
                                                         <td>
                                                             <a
                                                                 href="edit-subject.php?subjectid=<?php echo htmlentities($result->id); ?>"><i
-                                                                    class="fa fa-edit" title="Edit Record"></i> </a>
+                                                                    class="fa fa-edit" title="Chỉnh sửa"></i> </a>
 
                                                         </td>
                                                     </tr>

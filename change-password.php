@@ -85,7 +85,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Admin Change Password</h2>
+                                <h2 class="title">Thay đổi mật khẩu</h2>
                             </div>
 
                         </div>
@@ -93,9 +93,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i>Trang chủ</a></li>
 
-                                    <li class="active">Admin change password</li>
+                                    <li class="active">Thay đổi mật khẩu</li>
                                 </ul>
                             </div>
 
@@ -116,16 +116,16 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h5>Admin Change Password</h5>
+                                                <h5>Thay đổi mật khẩu</h5>
                                             </div>
                                         </div>
                                         <?php if ($msg) { ?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php 
                                             } else if ($error) { ?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php 
                                     } ?>
@@ -134,7 +134,7 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                             <form name="chngpwd" method="post" \ onSubmit="return valid();">
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="control-label">Current Password</label>
+                                                    <label for="success" class="control-label">Mật khẩy hiện tại</label>
                                                     <div class="">
                                                         <input type="password" name="password" class="form-control"
                                                             required="required" id="success">
@@ -142,14 +142,14 @@ if (strlen($_SESSION['alogin']) == "") {
                                                     </div>
                                                 </div>
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="co\ntrol-label">New Password</label>
+                                                    <label for="success" class="co\ntrol-label">Mật khẩu mới</label>
                                                     <div class="">
                                                         <input type="password" name="newpassword" required="required"
                                                             class="form-control" id="success">
                                                     </div>
                                                 </div>
                                                 <div class="form-group has-success">
-                                                    <label for="success" class="control-label">Confirm Password</label>
+                                                    <label for="success" class="control-label">Xác nhận mật khẩu</label>
                                                     <div class="">
                                                         <input type="password" name="confirmpassword"
                                                             class="form-control" required="required" id="success">
@@ -159,7 +159,7 @@ if (strlen($_SESSION['alogin']) == "") {
 
                                                     <div class="">
                                                         <button type="submit" name="submit"
-                                                            class="btn btn-success btn-labeled">Change<span
+                                                            class="btn btn-success btn-labeled">Thay đổi<span
                                                                 class="btn-label btn-label-right"><i
                                                                     class="fa fa-check"></i></span></button>
                                                     </div>

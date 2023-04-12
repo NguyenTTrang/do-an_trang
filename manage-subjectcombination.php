@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 error_reporting(0);
@@ -36,7 +37,7 @@ if (strlen($_SESSION['alogin']) == "") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Manage Subjects Combination</title>
+    <title>Quản trị môn của lớp học</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="css/animate-css/animate.min.css" media="screen">
@@ -80,7 +81,7 @@ if (strlen($_SESSION['alogin']) == "") {
                     <div class="container-fluid">
                         <div class="row page-title-div">
                             <div class="col-md-6">
-                                <h2 class="title">Manage Subjects Combination</h2>
+                                <h2 class="title">Quản trị môn học của lớp</h2>
 
                             </div>
 
@@ -90,9 +91,9 @@ if (strlen($_SESSION['alogin']) == "") {
                         <div class="row breadcrumb-div">
                             <div class="col-md-6">
                                 <ul class="breadcrumb">
-                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Home</a></li>
-                                    <li> Subjects</li>
-                                    <li class="active">Manage Subjects Combination</li>
+                                    <li><a href="dashboard.php"><i class="fa fa-home"></i> Trang chủ</a></li>
+                                    <li> Môn học</li>
+                                    <li class="active">Quản trị môn học của lớp</li>
                                 </ul>
                             </div>
 
@@ -112,15 +113,15 @@ if (strlen($_SESSION['alogin']) == "") {
                                     <div class="panel">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <h5>View Subjects Combination Info</h5>
+                                                <h5>Xem môn học của lớp</h5>
                                             </div>
                                         </div>
                                         <?php if ($msg) {?>
                                         <div class="alert alert-success left-icon-alert" role="alert">
-                                            <strong>Well done!</strong><?php echo htmlentities($msg); ?>
+                                            <strong>Làm tốt lắm!</strong><?php echo htmlentities($msg); ?>
                                         </div><?php } else if ($error) {?>
                                         <div class="alert alert-danger left-icon-alert" role="alert">
-                                            <strong>Oh snap!</strong> <?php echo htmlentities($error); ?>
+                                            <strong>Sai rồi!</strong> <?php echo htmlentities($error); ?>
                                         </div>
                                         <?php }?>
                                         <div class="panel-body p-20">
@@ -130,21 +131,12 @@ if (strlen($_SESSION['alogin']) == "") {
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Class and Section</th>
-                                                        <th>Subject </th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
+                                                        <th>Lớp học và Khoa</th>
+                                                        <th>Môn học </th>
+                                                        <th>Trạng thái</th>
+                                                        <th>Hoạt động</th>
                                                     </tr>
                                                 </thead>
-                                                <tfoot>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Class and Section</th>
-                                                        <th>Subject </th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </tfoot>
                                                 <tbody>
                                                     <?php $sql = "SELECT tblclasses.ClassName,tblclasses.Section,tblsubjects.SubjectName,tblsubjectcombination.id as scid,tblsubjectcombination.status from tblsubjectcombination join tblclasses on tblclasses.id=tblsubjectcombination.ClassId  join tblsubjects on tblsubjects.id=tblsubjectcombination.SubjectId";
     $query = $dbh->prepare($sql);
@@ -156,25 +148,25 @@ if (strlen($_SESSION['alogin']) == "") {
                                                     <tr>
                                                         <td><?php echo htmlentities($cnt); ?></td>
                                                         <td><?php echo htmlentities($result->ClassName); ?> &nbsp;
-                                                            Section-<?php echo htmlentities($result->Section); ?></td>
+                                                            Khóa-<?php echo htmlentities($result->Section); ?></td>
                                                         <td><?php echo htmlentities($result->SubjectName); ?></td>
                                                         <td><?php $stts = $result->status;
             if ($stts == '0') {
-                echo htmlentities('Inactive');
+                echo htmlentities('Không hoạt động');
             } else {
-                echo htmlentities('Active');
+                echo htmlentities('Hoạt động');
             }
             ?></td>
 
                                                         <td>
                                                             <?php if ($stts == '0') {?>
                                                             <a href="manage-subjectcombination.php?acid=<?php echo htmlentities($result->scid); ?>"
-                                                                onclick="confirm('do you really want to ativate this subject');"><i
+                                                                onclick="confirm('Bạn có muốn kích hoạt chủ đề này');"><i
                                                                     class="fa fa-check" title="Acticvate Record"></i>
                                                             </a><?php } else {?>
 
                                                             <a href="manage-subjectcombination.php?did=<?php echo htmlentities($result->scid); ?>"
-                                                                onclick="confirm('do you really want to deativate this subject');"><i
+                                                                onclick="confirm('Bạn có muốn hủy kích hoạt chủ đề này không');"><i
                                                                     class="fa fa-times" title="Deactivate Record"></i>
                                                             </a>
                                                             <?php }?>

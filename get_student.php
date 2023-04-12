@@ -8,7 +8,7 @@ if (!empty($_POST["classid"])) {
     } else {
         $stmt = $dbh->prepare("SELECT StudentName,StudentId FROM tblstudents WHERE ClassId= :id order by StudentName");
         $stmt->execute(array(':id' => $cid));
-        ?><option value="">Select Category </option><?php
+        ?><option value="">Chọn sinh viên </option><?php
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             ?>
   <option value="<?php echo htmlentities($row['StudentId']); ?>"><?php echo htmlentities($row['StudentName']); ?></option>
@@ -29,7 +29,7 @@ if (!empty($_POST["classid1"])) {
         $stmt->execute(array(':cid' => $cid1, ':stts' => $status));
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {?>
-  <p> <?php echo htmlentities($row['SubjectName']); ?><input type="text"  name="marks[]" value="" class="form-control" required="" placeholder="Enter marks out of 100" autocomplete="off"></p>
+  <p> <?php echo htmlentities($row['SubjectName']); ?><input type="text"  name="marks[]" value="" class="form-control" required="" placeholder="Nhập điểm môn học" autocomplete="off"></p>
 
 <?php }
     }
